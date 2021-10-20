@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green IT</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/589e715d40.js" crossorigin="anonymous"></script>
+	
+
+</head>
+<body>
+ 
+<div class="cabecera">
+	<h1>GREEN IT</h1>
+    <p>Campaña de concientización</p>
+</div>
+
+<br> 
+<div class="process-wrapper">
+<div id="progress-bar-container">
+	<ul>
+		<li class="step step01 active"><div class="step-inner">¿Qué es green it?</div></li>
+		<li class="step step02"><div class="step-inner">sus Objetivos</div></li>
+		<li class="step step03"><div class="step-inner">Chatarra electrÓnica</div></li>
+		<li class="step step04"><div class="step-inner">¡Alto!</div></li>
+		<li class="step step05"><div class="step-inner">Teletrabajo</div></li>
+	</ul>
+	
+	<div id="line">
+		<div id="line-progress"></div>
+	</div>
+</div>
+
+<div id="progress-content-section">
+	<div class="section-content discovery active" id="primero">
+		<h2>¿Qué es Green it?</h2>
+		<div id="uno">
+		<p>El Green IT es un conjunto de buenas prácticas que tienen como objetivo usar de manera eficiente los recursos IT para minimizar el impacto ambiental de la actividad y reducir el consumo energético, algo que se consigue, entre otras cosas, realizando una gestión eficiente de los recursos e infraestructuras.</p>
+		<i class="fas fa-question-circle"></i>
+
+
+	
+		</div>
+	</div>
+	
+	<div class="section-content strategy">
+		<h2>Objetivos</h2>
+		<div id="holi">
+		<ul>
+			<li style="font-size: 25px; font-weight: lighter;">Reducir uso de materiales peligrosos</li>
+			<li style="font-size: 25px;">Maximizar eficiencia energética durante la vida de un producto</li>
+			<li style="font-size: 25px;">Promover el reciclaje y biodegradabilidad de los residuos</li>
+		</ul>
+		<i class="far fa-check-circle"></i>		
+		</div>
+	</div>
+	 
+	<div class="section-content creative">
+		<h2>CHATARRA ELECTRÓNICA</h2>
+		<div id="dos" style="
+						display: flex;">
+			<i class="fas fa-trash-restore"
+			   style="font-size: 15rem; color: #087223; width: 40%;
+			margin-left: 5%;"></i>
+			<p style="width: 60%;">La chatarra electrónica se caracteriza por su rápido crecimiento debido a la rápida obsolescencia de los productos electrónicos. Aquellos productos eléctricos o electrónicos que han sido desechados tales como: ordenadores, celulares, impresoras, etc.</p>
+		</div>
+	</div>
+	
+	<div class="section-content production">
+		<h2>¡Alto!, no más papel</h2>
+		<div id="tres" style="display: flex;">
+		<p style="width: 60%;"> Opta por la documentación en formato electronico reduciendo la impresión</p>
+		<i class="far fa-hand-paper" style="font-size: 15rem; color:#087223;width: 40%; margin-left: 5%;" ></i>	
+	</div>
+	</div>
+	
+	<div class="section-content analysis">
+		<h2>Teletrabajo</h2>
+		<div id="cuatro" style="display: flex;">
+			<i class="fas fa-mobile-alt" style="font-size: 15rem; color:#087223;width: 40%; margin-left: 15%;"></i>
+
+			<p style="width: 60%;">Aprovechemos el teletrabajo para minimizar el impacto de nuestra actividad al ahorrar energía en nuestras oficinas y evitar desplazamientos en coche</p>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="quiz">
+	<h1>Queremos invitarte a jugar <span><i class="fas fa-gamepad"></i></span></h1>
+	<a href="quiz.html" class="btn btn3">Iniciar quiz</a>
+</div>
+
+<div class="footer">
+	
+	<div class="primer">
+		<ul>
+			<li><img src="https://www.univalle.edu.co/images/logo-footer.png" alt=""></li>
+			<li><i class="fas fa-leaf"></i></li>
+		</ul>
+		
+		
+	</div>
+
+	<div class="segundo">
+		<h3>Campaña de concientización para la asignatura de Impacto ambiental de la tecnología</h3>
+	</div>
+
+	<div class="tercero">
+		<h1>Integrantes</h1>
+		<ul>
+			<li>Rodolfo Bolaños</li>
+			<li>Brayan Ordoñez</li>
+			<li>Alejandro Ortega</li>
+			<li>Cristian Salazar</li>
+		</ul>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ <script>
+    
+    $(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "0%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click( function() {
+	$("#line-progress").css("width", "100%");
+	$(".analysis").addClass("active").siblings().removeClass("active");
+});
+
+ 
+    </script>
+</body>
+</html>
